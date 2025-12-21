@@ -51,6 +51,7 @@ html {
 #footer {
     grid-area: footer;
 }
+
 /* Fin del Layout */
 
 
@@ -97,6 +98,7 @@ a {
     from {
         width: 0%;
     }
+
     to {
         width: 100%;
     }
@@ -136,10 +138,12 @@ a {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+
     .mi-foto {
         display: block;
         margin: 0 auto;
     }
+
     .section {
         text-align: center;
         margin: 0 3rem 0 3rem;
@@ -169,10 +173,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
 
 }
 
+/* Animación de Imágenes de Habilidades */
 .img {
     width: 50px;
     height: 50px;
@@ -182,29 +188,72 @@ a {
     background: linear-gradient(#424242, #0e0e0e);
     padding: 20px;
     box-sizing: content-box;
+    animation: fadeSlide 0.8s both;
+    scale: 1;
 }
-
 .img:hover {
-    transform: scale(1.15);
+    scale: 1.15;
+    /* Aumentamos el brillo un 50% */
+    /* filter: brightness(1.5);  */
+    /* Opcional: un poco de contraste para que los colores resalten */
+    filter: brightness(1.5) contrast(1.1);
 }
 
-/* Seccion Proyectos */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-#proyectos {
-    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+.img:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.img:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.img:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.img:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.img:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.img:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.img:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+/* Sección Proyectos */
+
+#proyectos {}
 
 #proyectos h2 {
     text-align: center;
 }
 
-/* Seccion Contacto */
+/* Sección Contacto */
 
 #contacto {
     text-align: center;
 }
 
-/* Seccion Footer */
+/* Sección Footer */
 
 #footer {
     text-align: center;
