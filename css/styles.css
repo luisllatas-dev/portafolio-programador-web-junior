@@ -1,3 +1,5 @@
+/* Reset */
+/* Border Box por defecto */
 html {
     box-sizing: border-box;
 }
@@ -8,14 +10,15 @@ html {
     box-sizing: inherit;
 }
 
+/* Reset body */
 .body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(#000000, oklch(50% 0.134 242.749), oklch(21% 0.034 264.665));
+    background: linear-gradient(#000000, #0069a8, #101828);
     color: white;
 }
 
-/* Inicio del Layout */
+/* Inicio del Grid Layout */
 .layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -51,14 +54,13 @@ html {
 #footer {
     grid-area: footer;
 }
-
-/* Fin del Layout */
+/* Fin del Grid Layout */
 
 
 /* Menu */
 .header {
-    background-color: #000000;
-    padding: 0 5rem 0 5rem;
+    background-color: #0f1011;
+    padding: 0 5rem;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -69,7 +71,6 @@ html {
     justify-content: space-between;
 }
 
-
 .menu {
     display: flex;
     justify-content: space-between;
@@ -78,12 +79,20 @@ html {
     align-items: center;
 }
 
-a {
+.nav-link a {
     text-decoration: none;
     color: white;
 }
 
-/* Efecto del Links */
+/* Implementamos Focus para accesibilidad con Tab */
+.nav-link a:focus {
+    outline: 4px solid #003ba8;
+    border-radius: 8px;
+    outline-offset: 3px;
+    transition-delay: 125ms;
+}
+
+/* Efecto del Menu Links */
 .nav-link:hover::after {
     content: '';
     width: 100%;
@@ -104,7 +113,6 @@ a {
     }
 }
 
-
 /* Main */
 #main {
     display: grid;
@@ -120,8 +128,9 @@ a {
     align-items: center;
     height: 100%;
     width: auto;
+    margin: 0 25px;
+    text-align: center;
 }
-
 
 .mi-foto {
     width: 350px;
@@ -142,6 +151,7 @@ a {
     .mi-foto {
         display: block;
         margin: 0 auto;
+        width: 60%;
     }
 
     .section {
@@ -175,7 +185,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-
+    margin: 0 10px 0 10px;
 }
 
 /* Animación de Imágenes de Habilidades */
@@ -183,9 +193,9 @@ a {
     width: 50px;
     height: 50px;
     transition: 0.3s ease-out;
-    border: 2px solid rgb(92, 92, 92);
+    border: 2px solid #5c5c5c;
     border-radius: 8px;
-    background: linear-gradient(#424242, #0e0e0e);
+    background: linear-gradient(#424242, #0f1011);
     padding: 20px;
     box-sizing: content-box;
     animation: fadeSlide 0.8s both;
