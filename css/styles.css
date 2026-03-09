@@ -69,6 +69,7 @@ html {
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu {
@@ -113,6 +114,57 @@ html {
     }
 }
 
+/* Hamburger Button (oculto en desktop) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 200;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.hamburger-line {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación X cuando está activo */
+.hamburger.active .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.overlay.active {
+    display: block;
+}
+
 /* Main */
 #main {
     display: grid;
@@ -139,9 +191,47 @@ html {
     margin: 2rem;
     /* box-shadow: 0 0 10px black; */
     filter: drop-shadow(1px 1px 30px #0094a8);
+    border-radius: 50%;
 }
 
 @media (max-width: 780px) {
+    /* Hamburger visible en mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menu como sidebar lateral izquierdo */
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        background-color: #0f1011;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 2rem 2rem;
+        gap: 0;
+        margin: 0;
+        z-index: 150;
+        transition: left 0.3s ease;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    .menu .nav-link {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #1a1a2e;
+    }
+
+    .menu .nav-link a {
+        font-size: 1.1rem;
+    }
+
     #main {
         display: grid;
         grid-template-columns: 1fr;
@@ -164,7 +254,7 @@ html {
     }
 
     .header {
-        padding: 0;
+        padding: 0 1rem;
     }
 }
 

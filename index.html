@@ -13,7 +13,13 @@
         <header class="header">
             <nav class="nav">
                 <h1><img src="https://placehold.co/140x40/f0f0f0/333?text=Luis+Llatas" alt="Luis Llatas"></h1>
-                <ul class="menu">
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="overlay" id="overlay"></div>
+                <ul class="menu" id="menu">
                     <li class="nav-link"><a href="#main">Quien Soy</a></li>
                     <li class="nav-link"><a href="#Habilidades">Habilidades</a></li>
                     <li class="nav-link"><a href="#proyectos">Proyectos</a></li>
@@ -29,7 +35,7 @@
                 <p>Soy un desarrollador web con experiencia en el desarrollo de aplicaciones web.</p>
             </section>
             <aside class="aside">
-                <img src="/img/mi-foto.png" alt="Foto de perfil de Luis Eduardo" class="mi-foto">
+                <img src="/img/yo.png" alt="Foto de perfil de Luis Eduardo" class="mi-foto">
             </aside>
         </main>
 
@@ -61,6 +67,7 @@
         </footer>
     </div>
 
+    <script src="js/menu.js"></script>
 </body>
 
 </html>
