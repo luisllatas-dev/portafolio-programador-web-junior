@@ -4,6 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Luis Llatas — Desarrollador Full Stack. HTML, CSS, JavaScript, React, Node.js y más. Chiclayo, Perú.">
+    <meta name="author" content="Luis Llatas">
+    <meta property="og:title" content="Luis Llatas | Desarrollador Full Stack">
+    <meta property="og:description"
+        content="Portafolio profesional de Luis Llatas. Proyectos web modernos y funcionales.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luisllatas.dev">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <title>Luis Llatas | Portafolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,72 +24,150 @@
     <div class="layout">
         <header class="header">
             <nav class="nav">
-                <h1><img src="https://placehold.co/140x40/f0f0f0/333?text=Luis+Llatas" alt="Luis Llatas"></h1>
-                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
+                <h1 class="logo">Luis Llatas</h1>
+                <div class="nav-actions">
+                    <button class="theme-toggle theme-toggle--mobile" id="theme-toggle-mobile"
+                        aria-label="Cambiar tema">
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
                 <div class="overlay" id="overlay"></div>
-                <ul class="menu" id="menu">
+                <ul class="menu menu--desktop" id="menu">
                     <li class="nav-link"><a href="#main">Quien Soy</a></li>
-                    <li class="nav-link"><a href="#Habilidades">Habilidades</a></li>
                     <li class="nav-link"><a href="#proyectos">Proyectos</a></li>
                     <li class="nav-link"><a href="#contacto">Contáctame</a></li>
+                    <li class="theme-toggle-desktop">
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5" />
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </svg>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </header>
 
 
         <main id="main">
-            <section class="section">
-                <h2>Desarrollador Full Stack</h2>
-                <p>Soy un desarrollador web con experiencia en el desarrollo de aplicaciones web.</p>
-            </section>
-            <aside class="aside">
+            <div class="hero-content">
+                <section class="section">
+                    <div class="hero-text">
+                        <h2>Hello! I'm <span class="span-name">Luis Eduardo</span></h2>
+                        <h2><span class="typing-wrapper" id="typing-text"></span><span class="typing-cursor"></span></h2>
+                    </div>
+                    <p>Soy un desarrollador web con experiencia en el desarrollo de aplicaciones web.</p>
+                </section>
+            </div>
+            <div class="aside">
                 <img src="/img/yo.png" alt="Foto de perfil de Luis Eduardo" class="mi-foto">
-            </aside>
+            </div>
+            <div id="Habilidades" class="habilidades-hero">
+                <div class="marquee-track">
+                    <div class="marquee-set">
+                        <img src="/svg/html-5-svgrepo-com.svg" alt="html" class="img">
+                        <img src="/svg/css-3-svgrepo-com.svg" alt="css" class="img">
+                        <img src="/svg/react-svgrepo-com.svg" alt="react" class="img">
+                        <img src="/svg/javascript-svgrepo-com.svg" alt="javascript" class="img">
+                        <img src="/svg/vite-svgrepo-com.svg" alt="vite" class="img">
+                        <img src="/svg/node-svgrepo-com.svg" alt="node" class="img">
+                        <img src="/svg/tailwind-svgrepo-com.svg" alt="tailwind" class="img">
+                        <img src="/svg/git-svgrepo-com.svg" alt="git" class="img">
+                        <img src="/svg/github-142-svgrepo-com.svg" alt="github" class="img">
+                        <img src="/svg/microsoft-sql-server-logo-svgrepo-com.svg" alt="sqlserver" class="img">
+                        <img src="/svg/oracle-svgrepo-com.svg" alt="oracle" class="img">
+                        <img src="/svg/mongodb-svgrepo-com.svg" alt="mongodb" class="img">
+                        <img src="/svg/mysql-logo-svgrepo-com.svg" alt="mysql" class="img">
+                        <img src="/svg/postgresql-svgrepo-com (1).svg" alt="postgresql" class="img">
+                        <img src="/svg/figma-svgrepo-com.svg" alt="figma" class="img">
+                        <img src="/svg/python-svgrepo-com.svg" alt="python" class="img">
+                        <img src="/svg/bootstrap-fill-svgrepo-com.svg" alt="bootstrap" class="img">
+                        <img src="/svg/express-svgrepo-com.svg" alt="express" class="img">
+                        <img src="/svg/firebase-svgrepo-com.svg" alt="firebase" class="img">
+                    </div>
+                    <div class="marquee-set" aria-hidden="true">
+                        <img src="/svg/html-5-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/css-3-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/react-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/javascript-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/vite-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/node-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/tailwind-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/git-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/github-142-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/microsoft-sql-server-logo-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/oracle-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/mongodb-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/mysql-logo-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/postgresql-svgrepo-com (1).svg" alt="" class="img">
+                        <img src="/svg/figma-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/python-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/bootstrap-fill-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/express-svgrepo-com.svg" alt="" class="img">
+                        <img src="/svg/firebase-svgrepo-com.svg" alt="" class="img">
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <section id="Habilidades">
-            <h2>Habilidades</h2>
-            <div class="group">
-                
-                <img src="/svg/html-5-svgrepo-com.svg" alt="html imagen" class="img">
-                <img src="/svg/css-3-svgrepo-com.svg" alt="css imagen" class="img">
-                <img src="/svg/react-svgrepo-com.svg" alt="react imagen" class="img">
-                <img src="/svg/javascript-svgrepo-com.svg" alt="javascript imagen" class="img">
-                <img src="/svg/vite-svgrepo-com.svg" alt="vite imagen" class="img">
-                <img src="/svg/node-svgrepo-com.svg" alt="node imagen" class="img">
-                <img src="/svg/tailwind-svgrepo-com.svg" alt="tailwind imagen" class="img">
-                <img src="/svg/git-svgrepo-com.svg" alt="git imagen" class="img">
-                <img src="/svg/github-142-svgrepo-com.svg" alt="github imagen" class="img">
-                <img src="/svg/microsoft-sql-server-logo-svgrepo-com.svg" alt="sqlserver imagen" class="img">
-                <img src="/svg/oracle-svgrepo-com.svg" alt="oracle imagen" class="img">
-                <img src="/svg/mongodb-svgrepo-com.svg" alt="mongodb imagen" class="img">
-                <img src="/svg/mysql-logo-svgrepo-com.svg" alt="mysql imagen" class="img">
-                <img src="/svg/postgresql-svgrepo-com (1).svg" alt="postgresql imagen" class="img">
-                
-                
-            </div>
-        </section>
-
-        <section id="proyectos">
+        <section id="proyectos" class="fade-in">
             <h2>Mis Proyectos</h2>
             <div class="proyectos-grid">
 
                 <article class="card">
-                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+1" alt="Proyecto 1" class="card-img">
+                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+1" alt="Proyecto 1"
+                        class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Proyecto 1</h3>
                         <p class="card-desc">Breve descripción del proyecto y las tecnologías utilizadas.</p>
                         <div class="card-links">
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
                                 GitHub
                             </a>
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
                                 Demo
                             </a>
                         </div>
@@ -85,17 +175,27 @@
                 </article>
 
                 <article class="card">
-                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+2" alt="Proyecto 2" class="card-img">
+                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+2" alt="Proyecto 2"
+                        class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Proyecto 2</h3>
                         <p class="card-desc">Breve descripción del proyecto y las tecnologías utilizadas.</p>
                         <div class="card-links">
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
                                 GitHub
                             </a>
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
                                 Demo
                             </a>
                         </div>
@@ -103,17 +203,27 @@
                 </article>
 
                 <article class="card">
-                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+3" alt="Proyecto 3" class="card-img">
+                    <img src="https://placehold.co/400x220/1a1a2e/white?text=Proyecto+3" alt="Proyecto 3"
+                        class="card-img">
                     <div class="card-body">
                         <h3 class="card-title">Proyecto 3</h3>
                         <p class="card-desc">Breve descripción del proyecto y las tecnologías utilizadas.</p>
                         <div class="card-links">
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
                                 GitHub
                             </a>
                             <a href="#" target="_blank" class="card-link">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
                                 Demo
                             </a>
                         </div>
@@ -123,17 +233,19 @@
             </div>
         </section>
 
-        <section id="contacto">
+        <section id="contacto" class="fade-in">
             <h2>Contáctame</h2>
             <p class="contacto-desc">¿Tienes un proyecto en mente? ¡Hablemos!</p>
             <form class="contacto-form" action="https://usebasin.com/f/396dd34c2187" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    <span class="form-error" id="nombre-error">Ingresa tu nombre</span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    <span class="form-error" id="email-error">Ingresa un email válido</span>
                 </div>
                 <div class="form-group">
                     <label for="asunto">Asunto</label>
@@ -141,19 +253,34 @@
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."
+                        required></textarea>
+                    <span class="form-error" id="mensaje-error">Escribe tu mensaje</span>
                 </div>
                 <button type="submit" class="btn-enviar">Enviar Mensaje</button>
             </form>
             <div class="contacto-redes">
                 <a href="https://github.com/luisllatas-dev" target="_blank" class="red-link" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
                 </a>
                 <a href="https://linkedin.com/in/eduardollatas" target="_blank" class="red-link" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
                 </a>
                 <a href="mailto:luiseduardollatasmundaca@gmail.com" class="red-link" aria-label="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
                 </a>
             </div>
         </section>
@@ -163,28 +290,52 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3 class="footer-title">Luis Llatas</h3>
-                    <p class="footer-about">Desarrollador Full Stack apasionado por crear soluciones web modernas y funcionales.</p>
+                    <p class="footer-about">Desarrollador Full Stack apasionado por crear soluciones web modernas y
+                        funcionales.</p>
                 </div>
                 <div class="footer-col">
-                    
+
                     <ul class="footer-nav">
                         <li><a href="#main">Quien Soy</a></li>
-                        <li><a href="#Habilidades">Habilidades</a></li>
                         <li><a href="#proyectos">Proyectos</a></li>
                         <li><a href="#contacto">Contáctame</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <p class="footer-ubicacion">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
                         Chiclayo, Perú
                     </p>
                     <div class="footer-redes">
-                        <a href="https://github.com/luisllatas-dev" target="_blank" class="footer-red-link" aria-label="GitHub">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        <a href="https://github.com/luisllatas-dev" target="_blank" class="footer-red-link"
+                            aria-label="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                            </svg>
                         </a>
-                        <a href="https://linkedin.com/in/eduardollatas" target="_blank" class="footer-red-link" aria-label="LinkedIn">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <a href="https://linkedin.com/in/eduardollatas" target="_blank" class="footer-red-link"
+                            aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/eduardollatas" target="_blank" class="footer-red-link"
+                            aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -195,7 +346,15 @@
         </footer>
     </div>
 
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
     <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
