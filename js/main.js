@@ -10,15 +10,11 @@ function getPreferredTheme() {
 }
 
 function applyTheme(theme) {
-    if (theme === 'light') {
-        root.setAttribute('data-theme', 'light');
-    } else {
-        root.removeAttribute('data-theme');
-    }
+    root.setAttribute('data-theme', theme);
 }
 
 function toggleTheme() {
-    const current = root.getAttribute('data-theme') || 'dark';
+    const current = root.getAttribute('data-theme');
     const next = current === 'light' ? 'dark' : 'light';
     applyTheme(next);
     localStorage.setItem('theme', next);
