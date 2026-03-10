@@ -18,7 +18,7 @@ function applyTheme(theme) {
 }
 
 function toggleTheme() {
-    const current = root.getAttribute('data-theme');
+    const current = root.getAttribute('data-theme') || 'dark';
     const next = current === 'light' ? 'dark' : 'light';
     applyTheme(next);
     localStorage.setItem('theme', next);
